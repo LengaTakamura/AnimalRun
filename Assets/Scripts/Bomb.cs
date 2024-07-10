@@ -8,7 +8,7 @@ public class Bomb : ItemBase
 
     public override void Activate()
     {
-        
+        this.enabled = false;
     }
 
     // Start is called before the first frame update
