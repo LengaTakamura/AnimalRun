@@ -3,7 +3,9 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField]float speed = 1.0f;
+    [SerializeField] public float playerSpeed = 1.0f;
+
+    [SerializeField] public float playerHp = 5;
 
     void Start()
     {
@@ -13,32 +15,47 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         Moving();
+
+
     }
 
     void Moving()
     {
         if (Input.GetKey(KeyCode.W))
         {
-            rb.velocity = Vector2.up * speed;
+            rb.AddForce(Vector2.up * playerSpeed);
         }
 
         // Sキー（後方移動）
         if (Input.GetKey(KeyCode.S))
         {
-            rb.velocity = Vector2.down * speed;
+            rb.AddForce(Vector2.down * playerSpeed);
         }
 
         // Dキー（右移動）
         if (Input.GetKey(KeyCode.D))
         {
-            rb.velocity = Vector2.right * speed;
+            rb.AddForce(Vector2.right * playerSpeed);
         }
 
         // Aキー（左移動）
         if (Input.GetKey(KeyCode.A))
         {
-            rb.velocity = Vector2.left * speed;
+            rb.AddForce(Vector2.left * playerSpeed);
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+        }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == ("Horse"))
+        {
+        }
+    }
+
+
 }

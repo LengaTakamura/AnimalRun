@@ -136,6 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 8300000, guid: 0e299c48473078b489ac8980b7421e65, type: 3}
   _audioSource: {fileID: -2170416469131775639}
+  _playerManager: {fileID: 0}
+  getCount: 1
 --- !u!82 &-2170416469131775639
 AudioSource:
   m_ObjectHideFlags: 0

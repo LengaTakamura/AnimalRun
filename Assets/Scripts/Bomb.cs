@@ -4,22 +4,13 @@ using UnityEngine;
 
 public class Bomb : ItemBase
 {
+  
+   [SerializeField] PlayerManager playerManager;
 
 
     public override void Activate()
     {
-        this.enabled = false;
+      playerManager.playerHp = 0;   
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
