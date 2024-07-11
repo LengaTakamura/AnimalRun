@@ -12,14 +12,17 @@ public abstract class ItemBase : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
         if (collision.gameObject.tag == ("Player"))
         {
             Debug.Log("ƒAƒCƒeƒ€Žæ“¾");
 
             _audioSource.PlayOneShot(_audioClip);
 
-          
+            Activate();
+
         }
+        
     }
+    
+   
 }
