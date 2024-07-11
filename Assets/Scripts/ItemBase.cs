@@ -7,6 +7,7 @@ public abstract class ItemBase : MonoBehaviour
     [SerializeField] AudioClip _audioClip;
 
     [SerializeField]AudioSource _audioSource;
+
     public abstract void Activate();
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -18,7 +19,7 @@ public abstract class ItemBase : MonoBehaviour
 
             _audioSource.PlayOneShot(_audioClip);
 
-            Destroy(this);
+          
         }
     }
 }
