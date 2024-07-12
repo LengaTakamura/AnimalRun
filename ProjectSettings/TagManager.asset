@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Horse
+  - Crab
+  - Owl
+  - Frog
   layers:
   - Default
   - TransparentFX
